@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 @Component
 class SomeClass {
-
+    
     private SomeDependency someDependency;
 
     public SomeClass(SomeDependency someDependency) {
