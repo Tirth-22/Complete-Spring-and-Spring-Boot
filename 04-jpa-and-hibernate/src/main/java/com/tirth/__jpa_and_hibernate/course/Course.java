@@ -11,7 +11,6 @@ public class Course {
     private String author;
 
     public Course(){
-
     }
 
     public Course(long id, String courseName, String author) {
