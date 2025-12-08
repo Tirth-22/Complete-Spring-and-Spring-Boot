@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ac15b59-fb5d-4e33-b3a8-4028800f3d16" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../spring-framwork copy/bin/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framwork/bin/.project" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="36Mcw92UMT3oDYiV2JRE9VwRdCn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_DESCENDING" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App02HelloWorldSpring.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppGamingBasicJava.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BeanScopesLauncherApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CdiContextLauncherApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LazyInitializationLauncherApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrePostAnnotationLauncherApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.XmlConfigurationContextLauncherApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Udemy/spring-framwork/spring-framwork-02/src/main/java/com/in28min/spring_framwork/examples/h1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.in28min.spring_framwork.game" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Udemy\spring-framwork\spring-framwork-02\src\main\java\com\in28min\spring_framwork\examples\h1" />
+      <recent name="D:\Udemy\spring-framwork\spring-framwork-02\src\main\java\com\in28min\spring_framwork\examples\g1" />
+      <recent name="D:\Udemy\spring-framwork\spring-framwork-02\src\main\java\com\in28min\spring_framwork\examples\f1" />
+      <recent name="D:\Udemy\spring-framwork\spring-framwork-02\src\main\java\com\in28min\spring_framwork\examples\e1" />
+      <recent name="D:\Udemy\spring-framwork\spring-framwork-02\src\main\java\com\in28min\spring_framwork\examples\d1" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.in28min.spring_framwork" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.XmlConfigurationContextLauncherApplication">
+    <configuration name="BeanScopesLauncherApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.in28min.spring_framwork.examples.e1.BeanScopesLauncherApplication" />
+      <module name="spring-framwork-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28min.spring_framwork.examples.e1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CdiContextLauncherApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.in28min.spring_framwork.examples.g1.CdiContextLauncherApplication" />
+      <module name="spring-framwork-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28min.spring_framwork.examples.g1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LazyInitializationLauncherApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.in28min.spring_framwork.examples.d1.LazyInitializationLauncherApplication" />
+      <module name="spring-framwork-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28min.spring_framwork.examples.d1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrePostAnnotationLauncherApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.in28min.spring_framwork.examples.f1.PrePostAnnotationLauncherApplication" />
+      <module name="spring-framwork-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28min.spring_framwork.examples.f1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XmlConfigurationContextLauncherApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.in28min.spring_framwork.examples.h1.XmlConfigurationContextLauncherApplication" />
+      <module name="spring-framwork-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28min.spring_framwork.examples.h1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringFramworkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-framwork-01" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.in28min.spring_framwork.SpringFramworkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.XmlConfigurationContextLauncherApplication" />
+        <item itemvalue="Application.CdiContextLauncherApplication" />
+        <item itemvalue="Application.PrePostAnnotationLauncherApplication" />
+        <item itemvalue="Application.BeanScopesLauncherApplication" />
+        <item itemvalue="Application.LazyInitializationLauncherApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ac15b59-fb5d-4e33-b3a8-4028800f3d16" name="Changes" comment="" />
+      <created>1764820116536</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764820116536</updated>
+      <workItem from="1764820117852" duration="4894000" />
+      <workItem from="1764861981918" duration="1303000" />
+      <workItem from="1764906390939" duration="1312000" />
+      <workItem from="1764914766416" duration="779000" />
+      <workItem from="1764935828601" duration="4707000" />
+      <workItem from="1764948643082" duration="2190000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
