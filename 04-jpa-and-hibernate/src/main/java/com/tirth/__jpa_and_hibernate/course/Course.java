@@ -1,6 +1,11 @@
 package com.tirth.__jpa_and_hibernate.course;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
     private long id;
     private String courseName;
     private String author;
@@ -13,6 +18,10 @@ public class Course {
         this.id = id;
         this.courseName = courseName;
         this.author = author;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public long getId() {
