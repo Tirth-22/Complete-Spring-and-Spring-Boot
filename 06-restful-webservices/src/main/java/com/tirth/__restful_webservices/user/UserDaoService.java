@@ -1,10 +1,13 @@
 package com.tirth.__restful_webservices.user;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 @Component
 public class UserDaoService {
@@ -30,5 +33,19 @@ public class UserDaoService {
         user.setId(++userCount);
         users.add(user);
         return user;
+    }
+
+    public void deleteByid(int id){
+        Predicate<? super User> predicate = user -> user.getId().equals(id);
+        users.removeIf(predicate);
+    }
+
+    @ResponseStatus(code = HttpStatus.NOT_FOUND)
+    public static class UserNotFoundException extends RuntimeException {
+
+        public UserNotFoundException(String message) {
+            super(message);
+        }
+
     }
 }
