@@ -1,0 +1,22 @@
+{
+  "name": "npm-project",
+  "version": "1.0.0",
+  "description": "Inversion of Control (IoC)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tirth-22/Complete-Spring-and-Spring-Boot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tirth-22/Complete-Spring-and-Spring-Boot/issues"
+  },
+  "homepage": "https://github.com/Tirth-22/Complete-Spring-and-Spring-Boot#readme",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
