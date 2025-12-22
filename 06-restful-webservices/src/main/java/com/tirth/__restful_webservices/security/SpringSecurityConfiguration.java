@@ -25,7 +25,6 @@ public class SpringSecurityConfiguration {
 	         http.csrf(csrf -> csrf.disable());
         http.csrf(AbstractHttpConfigurer::disable);
 
-
 		return http.build();
 	}
 
