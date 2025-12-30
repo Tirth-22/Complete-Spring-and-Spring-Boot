@@ -22,7 +22,7 @@ const Login = () => {
         if(password==="dummy" && name==="tirth"){
             setShowErrorMessg(false)
             setshowSuccessMessg(true)
-            navigate('/welcome')
+            navigate(`/welcome/${name}`)
         }else{
             setShowErrorMessg(true)
             setshowSuccessMessg(false)

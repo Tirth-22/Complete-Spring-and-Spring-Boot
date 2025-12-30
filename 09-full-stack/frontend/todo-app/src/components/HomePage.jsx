@@ -2,7 +2,7 @@ import '../App.css'
 import ErrorPage from './ErrorPage'
 import Login from './Login'
 import Welcome from './Welcome'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 const HomePage = () => {
 
@@ -10,8 +10,8 @@ const HomePage = () => {
         <div>
             <Routes>
                 <Route path='/login' element={<Login />} />
-                <Route path='' element={<Welcome />} />
-                <Route path='/welcome' element={<Welcome />} />
+                <Route index element={<Welcome />} />
+                <Route path='/welcome/:username' element={<Welcome />} />
                 <Route path='*' element={<ErrorPage />}/>
             </Routes>
         </div>
