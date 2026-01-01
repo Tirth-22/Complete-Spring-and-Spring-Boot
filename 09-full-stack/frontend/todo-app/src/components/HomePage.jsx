@@ -7,9 +7,9 @@ import Login from './Login'
 import Welcome from './Welcome'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Logout from './Logout'
-import { Children } from 'react'
 import { useAuth } from './security/AuthProvider'
 import { Navigate } from "react-router-dom";
+import TodoUpdation from '../todo/TodoUpdation'
 
 function AuthenticateRoute({ children }) {
     const authContext = useAuth();
@@ -28,7 +28,11 @@ const HomePage = () => {
             <Routes>
                 <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Login />} />
-                <Route path='/logout' element={<Logout />} />
+                <Route path='/logout' element={
+                    <AuthenticateRoute>
+                        <Logout />
+                    </AuthenticateRoute>
+                } />
 
                 <Route path='/welcome/:username' element={
                     <AuthenticateRoute>
@@ -38,6 +42,11 @@ const HomePage = () => {
                 <Route path='/welcome/' element={
                     <AuthenticateRoute>
                         <Welcome />
+                    </AuthenticateRoute>
+                } />
+                <Route path='/todo/:id' element={
+                    <AuthenticateRoute>
+                        <TodoUpdation />
                     </AuthenticateRoute>
                 } />
                 <Route path='*' element={<ErrorPage />} />

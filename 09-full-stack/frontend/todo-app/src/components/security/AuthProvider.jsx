@@ -8,9 +8,10 @@ export default function AuthProvider({ children }) {
 
     const [number, setnumber] = useState(100)
     const [isAuthenticated, setisAuthenticated] = useState(false)
+    const [username, setusername] = useState(null)
     
     return(
-        <AuthContext.Provider value={{number,isAuthenticated,setisAuthenticated}}>
+        <AuthContext.Provider value={{number,isAuthenticated,setisAuthenticated, username, setusername}}>
             {children}
         </AuthContext.Provider>
     )
