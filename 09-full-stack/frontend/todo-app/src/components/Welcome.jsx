@@ -1,11 +1,16 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Welcome = () => {
  const {username} = useParams()
 
   return (
-    <div className='text-center py-40'>Welcome {username}</div>
+    <div>
+    <div className='h-screen items-center flex flex-col justify-center'>
+      <h1 className='font-bold text-4xl'>Welcome {username}</h1>
+      <p><Link className="text-blue-500 underline" to={"/todo"}>Manage</Link> your todos here</p>    
+    </div>
+    </div>
   )
 }
 
