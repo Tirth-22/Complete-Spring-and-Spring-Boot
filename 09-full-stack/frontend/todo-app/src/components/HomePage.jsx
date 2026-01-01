@@ -1,19 +1,55 @@
 import '../App.css'
+import TodoApp from '../todo/TodoApp'
 import ErrorPage from './ErrorPage'
+import Header from './Header'
+import Footer from './Footer'
 import Login from './Login'
 import Welcome from './Welcome'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import Logout from './Logout'
+import { Children } from 'react'
+import { useAuth } from './security/AuthProvider'
+import { Navigate } from "react-router-dom";
+
+function AuthenticateRoute({ children }) {
+    const authContext = useAuth();
+    if (authContext.isAuthenticated) {
+        return children
+    }
+    return <Navigate to="/login" replace />;
+}
 
 const HomePage = () => {
 
     return (
         <div>
+            <Header />
+
             <Routes>
                 <Route path='/login' element={<Login />} />
-                <Route index element={<Welcome />} />
-                <Route path='/welcome/:username' element={<Welcome />} />
-                <Route path='*' element={<ErrorPage />}/>
+                <Route path='/' element={<Login />} />
+                <Route path='/logout' element={<Logout />} />
+
+                <Route path='/welcome/:username' element={
+                    <AuthenticateRoute>
+                        <Welcome />
+                    </AuthenticateRoute>
+                } />
+                <Route path='/welcome/' element={
+                    <AuthenticateRoute>
+                        <Welcome />
+                    </AuthenticateRoute>
+                } />
+                <Route path='*' element={<ErrorPage />} />
+
+                <Route path='/todo' element={
+                    <AuthenticateRoute>
+                        <TodoApp />
+                    </AuthenticateRoute>
+                } />
             </Routes>
+
+            <Footer />
         </div>
     )
 }
