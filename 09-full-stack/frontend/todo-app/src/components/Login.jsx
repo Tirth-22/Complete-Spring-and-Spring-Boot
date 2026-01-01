@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from './security/AuthProvider'
 
 const Login = () => {
 
-    
+    const authContext = useAuth()
+
     const [name, setname] = useState('tirth')
     const [password, setpassword] = useState('')
     const [showErrorMessg, setShowErrorMessg] = useState(false)
@@ -20,10 +22,12 @@ const Login = () => {
 
     function showMessg(){
         if(password==="dummy" && name==="tirth"){
+            authContext.setisAuthenticated(true)
             setShowErrorMessg(false)
             setshowSuccessMessg(true)
             navigate(`/welcome/${name}`)
         }else{
+            authContext.setisAuthenticated(false)
             setShowErrorMessg(true)
             setshowSuccessMessg(false)
         }
