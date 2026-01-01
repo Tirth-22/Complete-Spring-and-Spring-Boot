@@ -6,7 +6,7 @@ const Footer = () => {
   // const authContext = useContext(AuthContext)
   const authContext = useAuth() 
 
-  console.log(`footer is - ${authContext.number}`);
+  // console.log(`footer is - ${authContext.number}`);
   console.log(authContext);
   
 
