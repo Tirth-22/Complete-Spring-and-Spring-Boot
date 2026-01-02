@@ -1,4 +1,3 @@
-package com.in28minutes.rest.webservices.restfulwebservices.jwt;
-
-public class JwtTokenResponse {
-}
+//package com.in28minutes.rest.webservices.restfulwebservices.jwt;
+//
+//public record JwtTokenResponse(String token) {}
