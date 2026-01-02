@@ -28,6 +28,7 @@ const HomePage = () => {
             <Routes>
                 <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Login />} />
+                
                 <Route path='/logout' element={
                     <AuthenticateRoute>
                         <Logout />

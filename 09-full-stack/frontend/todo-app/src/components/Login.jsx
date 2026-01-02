@@ -1,71 +1,76 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAuth } from './security/AuthProvider'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "./security/AuthProvider";
+import { executeBasicAuthService } from "./api/HelloWorldSerice";
 
 const Login = () => {
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-    const authContext = useAuth()
+  const [username, setUsername] = useState("tirth");
+  const [password, setPassword] = useState("");
+  const [showErrorMessg, setShowErrorMessg] = useState(false);
+  const [showSuccessMessg, setShowSuccessMessg] = useState(false);
 
-    const [username, setusername] = useState('tirth')
-    const [password, setpassword] = useState('')
-    const [showErrorMessg, setShowErrorMessg] = useState(false)
-    const [showSuccessMessg, setshowSuccessMessg] = useState(false)
-    const navigate = useNavigate()
+  function handleUsername(e) {
+    setUsername(e.target.value);
+  }
 
-    function handleUsername(e) {
-        setusername(e.target.value)
-    }                                                
+  function handlePassword(e) {
+    setPassword(e.target.value);
+  }
 
-    function handlePassword(e) {
-        setpassword(e.target.value)
+  async function handleLogin() {
+    const baToken = "Basic " + window.btoa(username + ":" + password);
+
+    try {
+      const response = await executeBasicAuthService(baToken);
+
+      if (response.status === 200) {
+        login(username, baToken);   // ✅ CORRECT
+        setShowErrorMessg(false);
+        setShowSuccessMessg(true);
+        navigate(`/welcome/${username}`);
+      }
+    } catch (error) {
+      setShowErrorMessg(true);
+      setShowSuccessMessg(false);
     }
+  }
 
-    function showMessg(){
-        if(password==="dummy" && username==="tirth"){
-            authContext.setisAuthenticated(true)
-            authContext.setusername(username)
-            setusername(username)
-            setShowErrorMessg(false)
-            setshowSuccessMessg(true)
-            navigate(`/welcome/${username}`)
-        }else{
-            authContext.setisAuthenticated(false)
-            setusername(null)
-            setShowErrorMessg(true)
-            setshowSuccessMessg(false)
-        }
-    }
+  return (
+    <div className="w-1/4 mx-auto my-20">
+      {showSuccessMessg && <div className="text-green-600">Successfully logged in</div>}
+      {showErrorMessg && <div className="text-red-600">Failed to login</div>}
 
-    function SuccessMessg(){
-        if(showSuccessMessg){
-            return <div>
-                Successfully login...
-            </div>
-        }
-        return null
-    }
-    function ErrorMessg(){
-        if(showErrorMessg){
-            return <div>
-                Failed to login...
-            </div>
-        }
-        return null
-    }
+      <div className="my-3 mx-4">
+        <input
+          className="border border-gray-300 rounded px-4 py-2 w-full"
+          type="text"
+          placeholder="Enter your username"
+          value={username}
+          onChange={handleUsername}
+        />
 
-    return (
-        <div className='w-1/4 mx-auto my-20'>
-            <SuccessMessg />
-            <ErrorMessg />
-            <div className='my-3 mx-4 '>
-                <input className="border border-gray-300 rounded px-4 py-2 w-full" type="text" placeholder="Enter your username" value={username} onChange={handleUsername} />
-                <input className="border border-gray-300 rounded px-4 py-2 w-full mt-2" type="password" placeholder="Enter your password" value={password} onChange={handlePassword} />
-            </div>
-            <div className="mt-2 ml-18">
-                <button onClick={showMessg} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">login</button>
-            </div>
-        </div>
-    )
-}
+        <input
+          className="border border-gray-300 rounded px-4 py-2 w-full mt-2"
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={handlePassword}
+        />
+      </div>
 
-export default Login
+      <div className="mt-2 text-center">
+        <button
+          onClick={handleLogin}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
