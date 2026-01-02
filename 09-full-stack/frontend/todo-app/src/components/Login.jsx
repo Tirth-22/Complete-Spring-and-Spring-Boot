@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./security/AuthProvider";
 import { executeBasicAuthService } from "./api/HelloWorldSerice";
+import { apiClient } from "./api/ApiClient";
 
 const Login = () => {
   const { login } = useAuth();
@@ -27,10 +28,19 @@ const Login = () => {
       const response = await executeBasicAuthService(baToken);
 
       if (response.status === 200) {
-        login(username, baToken);   // ✅ CORRECT
+        login(username, baToken);   
         setShowErrorMessg(false);
         setShowSuccessMessg(true);
         navigate(`/welcome/${username}`);
+
+        apiClient.interceptors.request.use(
+          (config) => {
+            console.log("intersepting and adding token")
+            config.headers.Authorization = baToken
+            return config
+          }
+        )
+
       }
     } catch (error) {
       setShowErrorMessg(true);

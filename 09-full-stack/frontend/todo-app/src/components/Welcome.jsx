@@ -3,15 +3,18 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { retriveHelloWorldBean, retriveHelloWorldPathvariable } from './api/HelloWorldSerice'
+import { useAuth } from './security/AuthProvider'
 
 const Welcome = () => {
+  const authContext = useAuth()
+
   const { username } = useParams()
 
   const [message, setmessage] = useState(null)
 
   function callHelloWorldApi(){
 
-    retriveHelloWorldPathvariable("tirth")
+    retriveHelloWorldPathvariable("tirth",authContext.token)
       .then((response) => { SuccessfulResponse(response) })
       .catch((error) => { ErrorResponse(error) })
       .finally( () => {console.log("cleanup");
